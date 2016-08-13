@@ -39,6 +39,9 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Colors")
 		UMaterial* PointCaptured;
 
+	UPROPERTY(EditAnywhere, Category = "Colors")
+		UMaterial* OpponentPointCaptured;
+
 	FTimerManager CaptureTimer;
 	FTimerHandle CaptureTimerHandle;
 };
