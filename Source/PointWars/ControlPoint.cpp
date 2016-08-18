@@ -11,7 +11,7 @@ AControlPoint::AControlPoint()
 	PrimaryActorTick.bCanEverTick = true;
 	SphereComponent = CreateDefaultSubobject<USphereComponent>(TEXT("Root Component"));
 	RootComponent = SphereComponent;
-	SphereComponent->InitSphereRadius(400.f);
+	SphereComponent->InitSphereRadius(800.f);
 
 
 	StaticMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Point"));
