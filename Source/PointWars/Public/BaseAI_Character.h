@@ -23,7 +23,7 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 
-	UPROPERTY(VisibleDefaultsOnly, Category = "Mesh")
-		USkeletalMeshComponent* AI_Body;
+	//UPROPERTY(VisibleDefaultsOnly, Category = "Mesh")
+	//	USkeletalMeshComponent* AI_Body;
 	
 };

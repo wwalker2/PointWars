@@ -10,8 +10,8 @@ ABaseAI_Character::ABaseAI_Character()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	AI_Body = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("SkeletalMesh"));
-	RootComponent = AI_Body;
+	//AI_Body = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("SkeletalMesh"));
+	//RootComponent = AI_Body;
 }
 
 // Called when the game starts or when spawned

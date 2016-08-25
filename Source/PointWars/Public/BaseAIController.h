@@ -13,7 +13,8 @@ class POINTWARS_API ABaseAIController : public AAIController
 {
 	GENERATED_BODY()
 	
+	virtual void BeginPlay() override;
 	
-	
-	
+	UPROPERTY(EditAnywhere, Category = "Behaviour Tree")
+	UBehaviorTree * BTAsset;
 };

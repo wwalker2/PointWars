@@ -3,6 +3,8 @@
 #include "PointWars.h"
 #include "BaseAIController.h"
 
-
-
-
+void ABaseAIController::BeginPlay()
+{
+	Super::BeginPlay();
+	RunBehaviorTree(BTAsset);
+}
