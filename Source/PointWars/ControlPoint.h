@@ -20,8 +20,10 @@ public:
 	// Called every frame
 	virtual void Tick( float DeltaSeconds ) override;
 
+
 	UPROPERTY(EditAnywhere)
 		USphereComponent* SphereComponent;
+
 
 	UPROPERTY(EditAnywhere)
 		UStaticMeshComponent* StaticMesh;
@@ -31,6 +33,7 @@ public:
 
 	
 private:
+	//Used when an Actor overlapps with the SphereComponent allowing the point to change color (be captured).
 	void PersonIsOnPoint();
 
 	UPROPERTY(EditAnywhere, Category = "Colors")
