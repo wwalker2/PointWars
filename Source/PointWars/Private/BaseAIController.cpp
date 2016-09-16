@@ -3,8 +3,17 @@
 #include "PointWars.h"
 #include "BaseAIController.h"
 
-void ABaseAIController::BeginPlay()
+#include "BehaviorTree/BehaviorTree.h"
+#include "BehaviorTree/BehaviorTreeComponent.h"
+#include "BehaviorTree/BlackboardComponent.h"
+
+ABaseAIController::ABaseAIController(const FObjectInitializer & ObjectInitializer)
+	: Super(ObjectInitializer)
+{	 
+		 BehaveComp = ObjectInitializer.CreateDefaultSubobject<UBehaviorTreeComponent>(this, TEXT("BehaveComp"));
+}
+
+AControlPoint * ABaseAIController::FindAPoint()
 {
-	Super::BeginPlay();
-	RunBehaviorTree(BTAsset);
+	return nullptr;
 }

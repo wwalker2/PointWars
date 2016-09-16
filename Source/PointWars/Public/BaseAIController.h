@@ -3,6 +3,7 @@
 #pragma once
 
 #include "AIController.h"
+#include "ControlPoint.h"
 #include "BaseAIController.generated.h"
 
 /**
@@ -12,9 +13,12 @@ UCLASS()
 class POINTWARS_API ABaseAIController : public AAIController
 {
 	GENERATED_BODY()
-	
-	virtual void BeginPlay() override;
-	
-	UPROPERTY(EditAnywhere, Category = "Behaviour Tree")
-	UBehaviorTree * BTAsset;
+
+	ABaseAIController(const class FObjectInitializer& ObjectInitializer);
+
+	UBehaviorTreeComponent* BehaveComp;
+	UBlackboardComponent* BlackBoardComp;
+
+public:
+	AControlPoint* FindAPoint();
 };
