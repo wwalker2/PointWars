@@ -12,7 +12,7 @@ class POINTWARS_API ABaseAI_Character : public ACharacter
 
 public:
 	// Sets default values for this character's properties
-	ABaseAI_Character();
+	ABaseAI_Character(const class FObjectInitializer& ObjectInitializer);
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -23,7 +23,7 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 
-	//UPROPERTY(VisibleDefaultsOnly, Category = "Mesh")
-	//	USkeletalMeshComponent* AI_Body;
+	UPROPERTY(EditDefaultsOnly, Category = "AI")
+	class UBehaviorTree* Behavior;
 	
 };
